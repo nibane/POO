@@ -59,6 +59,9 @@ class Compte {
         $receveur->crediter($montant);
 
     }
+    public function info(){
+        echo $this->libelle . " " . $this->solde . " " . $this->devise . " " . $this->titulaire;
+    }
 
 }
 
