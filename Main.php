@@ -6,13 +6,22 @@
 
 
 <?php
-require "Titulaire.php";
-require "Compte.php";
+// require "Titulaire.php";
+// require "Compte.php";
 
-$personne1 = new Titulaire("Omeyer", "balthazar", "09/01/1991", "Lune");
+spl_autoload_register(function ($class_name) {
+    require $class_name . ".php";
+});
 
-echo $personne1;
+$p1 = new Titulaire("Omeyer", "balthazar", "09/01/1991", "Lune");
 
+echo $p1.'<br>';
+
+$p2 = new Titulaire("Potter", "Harry", "10/10/95", "4 Privet Drive");
+
+echo $p2;
+
+$p1 
 
 
 ?>
