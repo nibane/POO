@@ -6,20 +6,20 @@
 
 
 <?php
-
+require "Compte.php";
 class Titulaire {
     public string $nom;
     public string $prenom;
-    public int $naissance;
+    public DateTime $naissance;
     public string $ville;
-    public string $allcompte;
+    public array $allcompte;
 
-    function __construct(string $nom, string $prenom, int $naissance ,string $ville, string $allcompte){
+    function __construct(string $nom, string $prenom, string $naissance ,string $ville){
     $this->nom = $nom;
     $this->prenom = $prenom;
-    $this->naissance = $naissance;
+    $this->naissance = new DateTime($naissance);
     $this->ville = $ville;
-    $this->allcompte = $allcompte;
+    $this->allcompte = [];
     }
     function set_nom($nom){
         $this->nom = $nom;
@@ -52,13 +52,20 @@ class Titulaire {
         return $this->ville;
     }
 
-    function allcompte($allcompte){
-        $this->allcompte = $allcompte;
+
+    function getInfos() {
+        return "plop";
     }
+
+    function __toString() {
+        return $this->nom . " " . $this->prenom;
+    }
+
     
-    function get_allcompte(){
-        return $this->allcompte;
-    }
+
+
+
+
 }
 
 ?>
