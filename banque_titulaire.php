@@ -8,46 +8,56 @@
 <?php
 
 class Compte {
-    public string $libelle;
-    public int $solde;
-    public int $devise;
-    public string $titulaire;
+    public string $nom;
+    public string $prenom;
+    public int $naissance;
+    public string $ville;
+    public string $allcompte;
 
-    function __construct(string $libelle, int $solde, int $devise ,string $titulaire){
-    $this->libelle = $libelle;
-    $this->solde = $solde;
-    $this->devise = $devise;
-    $this->titulaire = $titulaire;
+    function __construct(string $nom, string $prenom, int $naissance ,string $ville, string $allcompte){
+    $this->nom = $nom;
+    $this->prenom = $prenom;
+    $this->naissance = $naissance;
+    $this->ville = $ville;
+    $this->allcompte = $allcompte;
     }
-    function set_libelle($libelle){
-        $this->libelle = $libelle;
+    function set_nom($nom){
+        $this->nom = $nom;
     }
 
-    function get_libelle(){
-        return $this->libelle;
+    function get_nom(){
+        return $this->nom;
     }
-    function set_solde($solde){
-        $this->solde = $solde;
-    }
-    
-    function get_solde(){
-        return $this->solde;
+    function set_prenom($prenom){
+        $this->prenom = $prenom;
     }
     
-    function set_devise($devise){
-        $this->devise = $devise;
+    function get_prenom(){
+        return $this->prenom;
     }
     
-    function get_devise(){
-        return $this->devise;
+    function set_naissance($naissance){
+        $this->naissance = $naissance;
     }
     
-    function set_titulaire($titulaire){
-        $this->titulaire = $titulaire;
+    function get_naissance(){
+        return $this->naissance;
     }
     
-    function get_titulaire(){
-        return $this->titulaire;
+    function set_ville($ville){
+        $this->ville = $ville;
+    }
+    
+    function get_ville(){
+        return $this->ville;
+    }
+
+    function allcompte($allcompte){
+        $this->allcompte = $allcompte;
+    }
+    
+    function get_allcompte(){
+        return $this->allcompte;
     }
 }
 
