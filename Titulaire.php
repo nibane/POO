@@ -1,7 +1,6 @@
 
 
 <?php
-require "Compte.php";
 class Titulaire {
     public string $nom;
     public string $prenom;
@@ -53,9 +52,9 @@ class Titulaire {
     }
 
     function __toString() {
-        return $this->nom . " " . $this->prenom;
+        return $this->nom . " " . $this->prenom . "  " . $this->ville ." ". $this->naissance->format('d/m/y') ;
     }
-
+    
     
 
 
