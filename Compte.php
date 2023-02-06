@@ -10,14 +10,15 @@
 class Compte {
     public string $libelle;
     public int $solde;
-    public int $devise;
-    public string $titulaire;
+    public string $devise;
+    public Titulaire $titulaire;
 
-    function __construct(string $libelle, int $solde, int $devise ,string $titulaire){
-    $this->libelle = $libelle;
-    $this->solde = $solde;
-    $this->devise = $devise;
-    $this->titulaire = $titulaire;
+    function __construct(string $libelle, int $solde, string $devise ,Titulaire $titulaire){
+        $this->libelle = $libelle;
+        $this->solde = $solde;
+        $this->devise = $devise;
+        $this->titulaire = $titulaire;
+        $titulaire->allcompte[] = $this;
     }
     function set_libelle($libelle){
         $this->libelle = $libelle;
@@ -49,6 +50,13 @@ class Compte {
     function get_titulaire(){
         return $this->titulaire;
     }
+
+    public function crediter(float $debiter){
+        $this->solde += $debiter;
+        echo "Le compte de ".$this->libelle." de " .$this->titulaire."a été créditer de".$debiter."<br>";
+    }
+    
+
 }
 
 ?>
