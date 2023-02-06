@@ -14,14 +14,20 @@ spl_autoload_register(function ($class_name) {
 });
 
 $p1 = new Titulaire("Omeyer", "balthazar", "09/01/1991", "Lune");
+$c1 = new Compte("Compte courant", 500, "euro", $p1);
 
 echo $p1.'<br>';
+echo $c1->info().'<br><br>';
 
 $p2 = new Titulaire("Potter", "Harry", "10/10/95", "4 Privet Drive");
+$c2 = new Compte("compte courant", 5000, "euro", $p2);
 
-echo $p2;
 
-$p1 
+echo $p2.'<br>';
+echo $c2->info() . '<br><br>';
+
+
+ 
 
 
 ?>
