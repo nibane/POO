@@ -6,6 +6,12 @@
 
 
 <?php
+require "Titulaire.php";
+require "Compte.php";
+
+$personne1 = new Titulaire("Omeyer", "balthazar", "09/01/1991", "Lune");
+
+echo $personne1;
 
 
 
