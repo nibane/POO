@@ -59,7 +59,9 @@ class Livre {
         return $this->auteur;
     }
     
-        
+    function __toString(){
+        return $this->titre." ".$this->nbPage." ".$this->parution." ".$this->prix." ".$this->auteur;
+    }
     
 
 }
