@@ -14,9 +14,9 @@ class Livre {
     private int $nbPage;
     private DateTime $parution;
     private int $prix;
-    private string $auteur;
+    private Auteur $auteur;
 
-    function __construct(string $titre, int $nbPage, string $parution, int $prix, string $auteur){
+    function __construct(string $titre, int $nbPage, string $parution, int $prix, Auteur $auteur){
         $this->titre = $titre;
         $this->nbPage = $nbPage;
         $this->parution = new DateTime($parution);
@@ -61,6 +61,10 @@ class Livre {
     
     function __toString(){
         return $this->titre." ".$this->nbPage." ".$this->parution." ".$this->prix." ".$this->auteur;
+    }
+    
+    function ajouter(){
+
     }
     
 
