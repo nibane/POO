@@ -9,11 +9,23 @@
 
 
 class Livre {
+    
     private string $titre;
     private int $nbPage;
     private DateTime $parution;
     private int $prix;
     private string $auteur;
+
+    function __construct(string $titre, int $nbPage, string $parution, int $prix, string $auteur){
+        $this->titre = $titre;
+        $this->nbPage = $nbPage;
+        $this->parution = new DateTime($parution);
+        $this->prix = $prix;
+        $this->auteur = $auteur;
+    }
+    
+        
+    
 
 }
 
