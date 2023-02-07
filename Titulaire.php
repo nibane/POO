@@ -66,8 +66,11 @@ class Titulaire {
         $this->allcompte[] = $compte;
     }
 
-
-
+    public function tcompte(){
+        foreach ($this->allcompte as $compte)
+            echo $compte;
+    }
+    
 
 }
 
