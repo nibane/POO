@@ -1,1 +1,12 @@
 array push
+
+$titulaire->ajouterCompte($this);
+
+public function ajouterCompte(Compte $compte){
+        $this->allcompte[] = $compte;
+    }
+
+    public function tcompte(){
+        foreach ($this->allcompte as $compte)
+            echo $compte;
+    }
