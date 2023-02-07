@@ -9,4 +9,4 @@ public function ajouterCompte(Compte $compte){
     public function tcompte(){
         foreach ($this->allcompte as $compte)
             echo $compte;
-    }
+    } 
