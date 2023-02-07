@@ -48,21 +48,21 @@ class Titulaire {
     }
 
 
-    function getInfos() {
+    public function getInfos() {
         return "plop";
     }
 
-    function __toString() {
+    public function __toString() {
         return $this->nom . " " . $this->prenom . "  " . $this->ville ." ". $this->naissance->format('d/m/y') ;
     }
-    function age(){
+    public function age(){
         $date = $this->naissance;
        
         $today = new DateTime();
         $diff = date_diff($date,$today);
         echo $diff->format('%y').'ans';
     }
-    function ajouterCompte(Compte $compte){
+    public function ajouterCompte(Compte $compte){
         $this->allcompte[] = $compte;
     }
 
