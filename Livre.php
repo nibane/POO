@@ -60,11 +60,11 @@ class Livre {
     }
     
     function __toString(){
-        return $this->titre." ".$this->nbPage." ".$this->parution." ".$this->prix." ".$this->auteur;
+        return $this->titre." ".$this->nbPage." ".$this->parution->format('Y/m/d')." ".$this->prix." ".$this->auteur;
     }
     
     function ajouter(){
-
+         
     }
     
 
