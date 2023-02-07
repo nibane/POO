@@ -24,6 +24,11 @@ class Auteur {
     function __toString(){
         return $this->nom.' '.$this->prenom.' ';
     }
+
+    public function ajouterLivre(Livre $livre){
+        $this->livre[] = $livre;
+    }
+
 }
 
 ?>
