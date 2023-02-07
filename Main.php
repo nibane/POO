@@ -20,19 +20,22 @@ $p2 = new Titulaire("Potter", "Harry", "1980-07-31", "4 Privet Drive");
 $c2 = new Compte("Compte courant", 5000, "euro", $p2);
 
 echo $p1.'<br>';
-echo $c1->info().'<br>';
+echo $c1.'<br>';
 echo $p1->age().'<br><br>';
 
 
 
 echo $p2.'<br>';
-echo $c2->info().'<br>';
+echo $c2.'<br>';
 echo $p2->age().'<br><br>';
 
 
 echo $c1->virement($c2,200).'<br>';
-echo $c1->info().'<br>';
-echo $c2->info().'<br><br>';
+echo $c1.'<br>';
+echo $c2.'<br><br>';
+echo '<br>';
+echo $p1->tcompte().'<br>';
+echo $p2->tcompte().'<br>';
 
  
 
