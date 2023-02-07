@@ -62,6 +62,7 @@ class Compte {
     public function info(){
         echo $this->libelle . " " . $this->solde . " " . $this->devise . " " . $this->titulaire;
     }
+    
 
 }
 
