@@ -2,7 +2,7 @@
 
 <p></p>
 
-<h2>Résultat</h2>
+<h2></h2>
 
 
 <?php
@@ -11,11 +11,13 @@ class Auteur {
     
     private string $nom;
     private string $prenom;
+    private array $livre;
 
     
     function __construct(string $nom, string $prenom){
         $this->nom = $nom;
         $this->prenom = $prenom;
+        $this->livre = [];
     }
 
 
