@@ -16,21 +16,24 @@ spl_autoload_register(function ($class_name) {
 $p1 = new Titulaire("Omeyer", "balthazar", "1991-01-09", "Lune");
 $c1 = new Compte("Compte courant", 500, "euro", $p1);
 
-echo $p1.'<br>';
-echo $c1->info().'<br><br>';
-
 $p2 = new Titulaire("Potter", "Harry", "1980-07-31", "4 Privet Drive");
 $c2 = new Compte("Compte courant", 5000, "euro", $p2);
 
+echo $p1.'<br>';
+echo $c1->info().'<br>';
+echo $p1->age().'<br><br>';
+
+
 
 echo $p2.'<br>';
-echo $c2->info() . '<br><br>';
+echo $c2->info().'<br>';
+echo $p2->age().'<br><br>';
 
 
 echo $c1->virement($c2,200).'<br>';
 echo $c1->info().'<br>';
-echo $c2->info();
-echo $p1->age();
+echo $c2->info().'<br><br>';
+
  
 
 
