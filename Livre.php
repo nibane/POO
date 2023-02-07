@@ -21,7 +21,7 @@ class Livre {
         $this->nbPage = $nbPage;
         $this->parution = new DateTime($parution);
         $this->prix = $prix;
-        $this->auteur = $auteur;
+        $auteur->ajouterLivre($this);
     }
     function set_titre($titre){
         $this->titre = $titre;
@@ -63,9 +63,7 @@ class Livre {
         return $this->titre." ".$this->nbPage." ".$this->parution->format('Y/m/d')." ".$this->prix." ".$this->auteur;
     }
     
-    function ajouter(){
-         
-    }
+   
     
 
 }
