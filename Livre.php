@@ -23,6 +23,41 @@ class Livre {
         $this->prix = $prix;
         $this->auteur = $auteur;
     }
+    function set_titre($titre){
+        $this->titre = $titre;
+    }
+
+    function get_titre(){
+        return $this->titre;
+    }
+    function set_nbPage($nbPage){
+        $this->nbPage = $nbPage;
+    }
+
+    function get_nbPage(){
+        return $this->nbPage;
+    }
+    function set_parution($parution){
+        $this->parution = $parution;
+    }
+
+    function get_parution(){
+        return $this->parution;
+    }
+    function set_prix($prix){
+        $this->prix = $prix;
+    }
+
+    function get_prix(){
+        return $this->prix;
+    }
+    function set_auteur($auteur){
+        $this->auteur = $auteur;
+    }
+
+    function get_auteur(){
+        return $this->auteur;
+    }
     
         
     
