@@ -59,11 +59,10 @@ class Compte {
         $receveur->crediter($montant);
 
     }
-    public function info(){
-        echo $this->libelle . " " . $this->solde . " " . $this->devise . " " . $this->titulaire;
+    public function __toString(){
+        return $this->libelle . " " . $this->solde . " " . $this->devise . " " . $this->titulaire;
     }
     
-
 }
 
 ?>
