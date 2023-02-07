@@ -48,11 +48,11 @@ class Compte {
 
     public function crediter(float $crediter){
         $this->solde += $crediter;
-        echo "Le compte ".$this->libelle." de " .$this->titulaire." a été créditer de ".$crediter."<br>";
+        echo "Le compte ".$this->libelle." de " .$this->titulaire." a été créditer de ".$crediter;
     }
     public function debiter(float $debiter){
         $this->solde -= $debiter;
-        echo "Le compte ".$this->libelle." de ".$this->titulaire." a été débiter de ".$debiter."<br>";
+        echo "Le compte ".$this->libelle." de ".$this->titulaire." a été débiter de ".$debiter;
     }
     public function virement(Compte $receveur, float $montant){
         $this->debiter($montant);
