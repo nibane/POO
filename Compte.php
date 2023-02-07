@@ -3,17 +3,17 @@
 <?php
 
 class Compte {
-    public string $libelle;
-    public int $solde;
-    public string $devise;
-    public Titulaire $titulaire;
+    private string $libelle;
+    private int $solde;
+    private string $devise;
+    private Titulaire $titulaire;
 
     function __construct(string $libelle, int $solde, string $devise ,Titulaire $titulaire){
         $this->libelle = $libelle;
         $this->solde = $solde;
         $this->devise = $devise;
         $this->titulaire = $titulaire;
-        $titulaire->allcompte[] = $this;
+        $titulaire->ajouterCompte($this);
     }
     function set_libelle($libelle){
         $this->libelle = $libelle;

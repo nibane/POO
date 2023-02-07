@@ -2,18 +2,19 @@
 
 <?php
 class Titulaire {
-    public string $nom;
-    public string $prenom;
-    public DateTime $naissance;
-    public string $ville;
-    public array $allcompte;
+    private string $nom;
+    private string $prenom;
+    private DateTime $naissance;
+    private string $ville;
+    private array $allcompte;
 
     function __construct(string $nom, string $prenom, string $naissance ,string $ville){
-    $this->nom = $nom;
-    $this->prenom = $prenom;
-    $this->naissance = new DateTime($naissance);
-    $this->ville = $ville;
-    $this->allcompte = [];
+        $this->nom = $nom;
+        $this->prenom = $prenom;
+        $this->naissance = new DateTime($naissance);
+        $this->ville = $ville;
+        $this->allcompte = [];
+
     }
     function set_nom($nom){
         $this->nom = $nom;
@@ -54,8 +55,16 @@ class Titulaire {
     function __toString() {
         return $this->nom . " " . $this->prenom . "  " . $this->ville ." ". $this->naissance->format('d/m/y') ;
     }
-    
-    
+    function age(){
+        $date = $this->naissance;
+       
+        $today = new DateTime();
+        $diff = date_diff($date,$today);
+        echo $diff->format('%y').'ans';
+    }
+    function ajouterCompte(Compte $compte){
+        $this->allcompte[] = $compte;
+    }
 
 
 

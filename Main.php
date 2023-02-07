@@ -13,13 +13,13 @@ spl_autoload_register(function ($class_name) {
     require $class_name . ".php";
 });
 
-$p1 = new Titulaire("Omeyer", "balthazar", "09/01/1991", "Lune");
+$p1 = new Titulaire("Omeyer", "balthazar", "1991-01-09", "Lune");
 $c1 = new Compte("Compte courant", 500, "euro", $p1);
 
 echo $p1.'<br>';
 echo $c1->info().'<br><br>';
 
-$p2 = new Titulaire("Potter", "Harry", "31/07/1980", "4 Privet Drive");
+$p2 = new Titulaire("Potter", "Harry", "1980-07-31", "4 Privet Drive");
 $c2 = new Compte("Compte courant", 5000, "euro", $p2);
 
 
@@ -30,6 +30,7 @@ echo $c2->info() . '<br><br>';
 echo $c1->virement($c2,200).'<br>';
 echo $c1->info().'<br>';
 echo $c2->info();
+echo $p1->age();
  
 
 
