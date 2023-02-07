@@ -19,7 +19,7 @@ $c1 = new Compte("Compte courant", 500, "euro", $p1);
 echo $p1.'<br>';
 echo $c1->info().'<br><br>';
 
-$p2 = new Titulaire("Potter", "Harry", "10/10/95", "4 Privet Drive");
+$p2 = new Titulaire("Potter", "Harry", "31/07/1980", "4 Privet Drive");
 $c2 = new Compte("Compte courant", 5000, "euro", $p2);
 
 
