@@ -24,7 +24,7 @@ class Auteur {
 
 
     function __toString(){
-        return $this->nom.' '.$this->prenom.' '.$this->getBiblio();
+        return $this->nom . ' ' . $this->prenom;
     }
 
     public function ajouterLivre(Livre $livre){
@@ -34,7 +34,11 @@ class Auteur {
     public function getBiblio() {
         return "<a href='$this->biblio'>Lien biblio</a>";
     }
-
+    public function tlivre(){
+        foreach ($this->livre as $L)
+            echo $L;
+    }
 }
+    
 
 ?>
