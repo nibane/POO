@@ -22,9 +22,9 @@ class Auteur {
 
 
 
-    
+
     function __toString(){
-        return $this->nom.' '.$this->prenom.' '.$this->getBiblio()."<br>";
+        return $this->nom.' '.$this->prenom.' '.$this->getBiblio();
     }
 
     public function ajouterLivre(Livre $livre){
