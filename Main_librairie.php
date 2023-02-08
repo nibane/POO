@@ -7,6 +7,13 @@
 
 <?php
 
+spl_autoload_register(function ($class_name) {
+    require $class_name . ".php";
+});
 
+
+$A1 = new Auteur("Stephen", "King", "https://www.senscritique.com/liste/stephen_king_e_bibliographie_complete/48872");
+
+echo $A1;
 
 ?>
