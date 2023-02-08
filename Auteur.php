@@ -17,16 +17,22 @@ class Auteur {
     }
 
 
+
+
+
+
+
+    
     function __toString(){
-        return $this->nom.' '.$this->prenom.' '.$this->biblio;
+        return $this->nom.' '.$this->prenom.' '.$this->getBiblio()."<br>";
     }
 
     public function ajouterLivre(Livre $livre){
         $this->livre[] = $livre;
     }
-    public function addbiblio($biblio){
-        echo'<a href= '.$biblio.' > : lien bibliographie </a>'; 
 
+    public function getBiblio() {
+        return "<a href='$this->biblio'>Lien biblio</a>";
     }
 
 }

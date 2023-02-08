@@ -16,4 +16,8 @@ $A1 = new Auteur("Stephen", "King", "https://www.senscritique.com/liste/stephen_
 
 echo $A1;
 
+$L1 = new Livre("Ca", 1138, "1986", 20, $A1);
+
+echo $L1;
+
 ?>

@@ -15,6 +15,7 @@ class Livre {
         $this->nbPage = $nbPage;
         $this->parution = new DateTime($parution);
         $this->prix = $prix;
+        $this->auteur = $auteur;
         $auteur->ajouterLivre($this);
     }
     function set_titre($titre){
