@@ -6,13 +6,15 @@ class Film {
     private DateTime $date;
     private DateTime $dure;
     private Real $Real;
+    private string $genre;
 
 
-    function __construct(string $titre, string $date, string $dure, Real $Real){
+    function __construct(string $titre, string $date, string $dure, Real $Real, string $genre){
         $this->titre = $titre;
         $this->date = new DateTime($date);
         $this->dure = new DateTime($dure);
-        $this->Real = $Real;
+        $Real = ajouterReal($this);
+        $this->genre = $genre;
     }
 
     function set_titre($titre){
@@ -46,8 +48,11 @@ class Film {
     function get_Real(){
         return $this->Real;
     }
-
     
+    function synopsis($texte){
+        return $texte;
+    }
+
 
 
 }
