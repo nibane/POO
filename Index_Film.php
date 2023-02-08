@@ -7,6 +7,11 @@
 
 <?php
 
+spl_autoload_register(function ($class_name) {
+    require $class_name . ".php";
+});
 
+$p1 = new Realisateur("Steven", "Spielberg", "Homme", 1965);
+echo $p1;
 
 ?>

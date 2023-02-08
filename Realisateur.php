@@ -53,6 +53,9 @@ class Realisateur{
     public function ajouterFilm(Film $film){
         $this->allFilms[] = $film;
     }
+    function __toString(){
+        return $this->nom . " " . $this->prenom . " " . $this->naissance . " " . $this->allFilms;
+    }
 
 }
 

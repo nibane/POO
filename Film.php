@@ -45,8 +45,11 @@ class Film {
         return $this->dure;
     }
 
-    function set_Real($Real){
-        $this->Real = $Real;
+    function set_real($real){
+        $this->real = $real;
+    }
+    function get_real($real){
+        return $this->real;
     }
 
     function get_casting(){
