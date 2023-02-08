@@ -32,7 +32,7 @@ class Auteur {
     }
 
     public function getBiblio() {
-        return "<a href='$this->biblio'>Lien biblio</a>";
+        return "<a href='$this->biblio'>Lien bibliographie</a>";
     }
     public function tlivre(){
         foreach ($this->livre as $L)
