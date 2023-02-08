@@ -1,9 +1,3 @@
-<h1>Exercice 2<h/1>
-
-<p></p>
-
-<h2></h2>
-
 
 <?php
 
@@ -24,7 +18,7 @@ class Auteur {
 
 
     function __toString(){
-        return $this->nom.' '.$this->prenom.' ';
+        return $this->nom.' '.$this->prenom.' '.$this->biblio;
     }
 
     public function ajouterLivre(Livre $livre){
