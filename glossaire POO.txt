@@ -10,3 +10,10 @@ public function ajouterCompte(Compte $compte){
         foreach ($this->allcompte as $compte)
             echo $compte;
     } 
+
+
+
+spl_autoload_register(function ($class_name) {
+    require $class_name . ".php";
+});
+//utilise require avec les bonnes valeur automatiquement
