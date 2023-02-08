@@ -55,7 +55,7 @@ class Livre {
     }
     
     function __toString(){
-        return $this->titre." ".$this->nbPage." ".$this->parution->format('Y/m/d')." ".$this->prix." ".$this->auteur;
+        return $this->titre." ".$this->nbPage." pages ".$this->parution->format('Y')." coûte ".$this->prix."€ l'auteur est : " .$this->auteur."<br>";
     }
     
    
