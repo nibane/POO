@@ -54,7 +54,13 @@ class Realisateur{
         $this->allFilms[] = $film;
     }
     function __toString(){
-        return $this->nom . " " . $this->prenom . " " . $this->naissance . " " . $this->allFilms;
+        return $this->nom . " " . $this->prenom . " ";
+    }
+
+    function afficherFilms() {
+        foreach ($this->allFilms as $film) {
+            echo $film->get_titre()."<br>";
+        }
     }
 
 }

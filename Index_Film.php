@@ -11,7 +11,12 @@ spl_autoload_register(function ($class_name) {
     require $class_name . ".php";
 });
 
-$p1 = new Realisateur("Steven", "Spielberg", "Homme", 1965);
-echo $p1;
+$R1 = new Realisateur("Steven", "Spielberg", "Homme", "1946/12/18");
+echo $R1."<br>";
+$sf = new Genre("Science-Fiction");
+
+$F1 = new Film("Jurassic Park", 1993, 128, $R1, $sf);
+$F1 = new Film("Jurassic Park 2", 2000, 200, $R1, $sf);
+echo $R1->afficherFilms() . "<br>";
 
 ?>
