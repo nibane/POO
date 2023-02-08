@@ -1,25 +1,17 @@
 <?php
 
 class Genre{
-    private array $fantastique;
-    private array $action;
-    private array $guerre;
-    private array $police;
-    private array $comedie;
+    private string $nomGenre;
+    private array $films;
 
-
-    function __construct(){
-        $this->fantastique = [];
-        $this->action = [];
-        $this->guerre = [];
-        $this->police = [];
-        $this->comedie = [];
+    function __construct($nomGenre){
+        $this->nomGenre = $nomGenre;
+        $this->films = [];
     }
 
-
-
-
-
+    function ajouterFilm(Film $film){
+        $this->films[] = $film; 
+    }
 
 }
 
