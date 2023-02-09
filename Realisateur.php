@@ -7,7 +7,7 @@ class Realisateur{
     private DateTime $naissance;
     private array $allFilms;
 
-    function __construct(string $nom, string $prenom, string $sexe, string $naissance,){
+    function __construct(string $nom, string $prenom, string $sexe, string $naissance){
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->sexe = $sexe;
