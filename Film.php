@@ -69,6 +69,9 @@ class Film {
         return $texte;
     }
 
+    function __toString() {
+        return $this->titre . " sorti en : " . $this->date;
+    }
 
 
 }
