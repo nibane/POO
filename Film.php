@@ -70,11 +70,7 @@ class Film {
         $this->castings[] = $casting;
     }
     
-
     
-    function synopsis($texte){
-        return $texte;
-    }
 
     function __toString() {
         return $this->titre . " sorti en : " . $this->date;
