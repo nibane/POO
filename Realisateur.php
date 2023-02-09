@@ -50,17 +50,22 @@ class Realisateur{
         return $this->allFilms;
     }
 
-    public function ajouterFilm(Film $film){
+    function ajouterFilm(Film $film){
         $this->allFilms[] = $film;
     }
-    function __toString(){
-        return $this->nom . " " . $this->prenom . " ";
+    
+    function afficherFilms() {
+
+        $result =  $this . " a réalisé au cour de sa carrière : <br>";
+        foreach ($this->allFilms as $film) {
+            $result .= $film . " <br>";
+        }
+
+        return $result;
     }
 
-    function afficherFilms() {
-        foreach ($this->allFilms as $film) {
-            echo $film->get_titre()."<br>";
-        }
+    function __toString(){
+        return $this->nom . " " . $this->prenom . " ";
     }
 
 }
