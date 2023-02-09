@@ -7,7 +7,7 @@ class Film {
     private int $dure;
     private Realisateur $real;
     private Genre $genre;
-    private array $casting;
+    private array $castings;
 
 
     function __construct(string $titre, int $date, int $dure, Realisateur $real, Genre $genre){
@@ -18,7 +18,7 @@ class Film {
         $this->genre = $genre;
         $genre->ajouterFilm($this);
         $real->ajouterFilm($this);
-        $this->casting = [];
+        $this->castings = [];
     }
 
     function set_titre($titre){
@@ -52,11 +52,11 @@ class Film {
         return $this->real;
     }
 
-    function get_casting(){
-        return $this->casting;
+    function get_castings(){
+        return $this->castings;
     }
-    function set_casting($casting){
-        $this->casting = $casting;
+    function set_casting($castings){
+        $this->castings = $castings;
     }
     function set_genre($genre){
         $this->genre = $genre;
@@ -64,6 +64,13 @@ class Film {
     function get_genre(){
         return $this->genre;
     }
+
+
+    function addCasting(Casting $casting) {
+        $this->castings[] = $casting;
+    }
+    
+
     
     function synopsis($texte){
         return $texte;
@@ -76,5 +83,5 @@ class Film {
 
 }
 
-
+//casting
 ?>
