@@ -30,7 +30,10 @@ class Role {
     function addCasting(Casting $casting) {
         $this->castings[] = $casting;
     }
-    
+    function __toString()
+    {
+        return $this->nomRole."<br>";
+    }
 
 
 }

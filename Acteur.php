@@ -41,6 +41,10 @@ class Acteur{
     function addCasting(Casting $casting) {
         $this->castings[] = $casting;
     }
+    function __toString()
+    {
+        return $this->nom." ".$this->prenom;
+    }
     
 
    
