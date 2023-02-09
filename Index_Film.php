@@ -31,12 +31,15 @@ $R3 = new Realisateur("Peter", "Jackson", "Homme", "1961/10/31");
 $F3 = new Film ("Le Seigneur des anneaux", 2001,178 ,$R3 ,$fa);
 
 
+$A1 = new Acteur ("George","Clooney");
+$R1 = new Role ("Batman");
+$C1 = new Casting ($A1,$F1,$R1);
 
+echo $C1
 
-
-echo $R1->afficherFilms()."<br>";
-echo $R2->afficherFilms()."<br>";
-echo $R3->afficherFilms()."<br>";
+// echo $R1->afficherFilms()."<br>";
+// echo $R2->afficherFilms()."<br>";
+// echo $R3->afficherFilms()."<br>";
 
 
 
