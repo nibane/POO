@@ -48,7 +48,7 @@ class Film {
     function set_real($real){
         $this->real = $real;
     }
-    function get_real($real){
+    function get_real(){
         return $this->real;
     }
 
@@ -57,6 +57,12 @@ class Film {
     }
     function set_casting($casting){
         $this->casting = $casting;
+    }
+    function set_genre($genre){
+        $this->genre = $genre;
+    }
+    function get_genre(){
+        return $this->genre;
     }
     
     function synopsis($texte){
