@@ -13,18 +13,32 @@ class casting {
         $acteur->addCasting($this);
         $film->addCasting($this);
         $role->addCasting($this);
+    }
 
-
-
+    function set_acteur($acteur){
+        $this->acteur = $acteur;
     }
     
-    // setter
+    function get_acteur(){
+        return $this->acteur;
+    }
+    function set_film($film){
+        $this->film = $film;
+    }
+    
+    function get_film(){
+        return $this->film;
+    }
+    function set_role($role){
+        $this->role = $role;
+    }
+    
+    function get_role(){
+        return $this->role;
+    }
 
-
-
-    // getter
-
-
+}
+    
 
 
 
@@ -33,6 +47,6 @@ class casting {
 
 
 
-}
+
         //acteur film role
 ?>
