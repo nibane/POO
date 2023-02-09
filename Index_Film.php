@@ -11,12 +11,36 @@ spl_autoload_register(function ($class_name) {
     require $class_name . ".php";
 });
 
-$R1 = new Realisateur("Steven", "Spielberg", "Homme", "1946/12/18");
-echo $R1."<br>";
-$sf = new Genre("Science-Fiction");
+$fa = new Genre("Fantastique");
+$po = new Genre("Policier");
+$ho = new Genre("Horreur");
+$av = new Genre("Aventure");
+$sf = new Genre("Science-fiction");
 
-$F1 = new Film("Jurassic Park", 1993, 128, $R1, $sf);
-$F1 = new Film("Jurassic Park 2", 2000, 200, $R1, $sf);
-echo $R1->afficherFilms() . "<br>";
+
+$R1 = new Realisateur("Christopher", "Nolan", "Homme", "1970/07/30");
+
+$F1 = new Film("Batman", 2025, 140, $R1, $po);
+
+$R2 = new Realisateur("George", "Lucas", "Homme", "1944/03/14");
+
+$F2 = new Film("Star wars", 1977, 121, $R2, $sf);
+
+$R3 = new Realisateur("Peter", "Jackson", "Homme", "1961/10/31");
+
+$F3 = new Film ("Le Seigneur des anneaux", 2001,178 ,$R3 ,$fa);
+
+
+
+
+
+echo $R1->afficherFilms()."<br>";
+echo $R2->afficherFilms()."<br>";
+echo $R3->afficherFilms()."<br>";
+
+
+
+
+
 
 ?>
