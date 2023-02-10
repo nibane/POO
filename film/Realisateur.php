@@ -7,7 +7,7 @@ class Realisateur{
     private DateTime $naissance;
     private array $allFilms;
 
-    function __construct(string $nom, string $prenom, string $sexe, string $naissance){
+    public function __construct(string $nom, string $prenom, string $sexe, string $naissance){
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->sexe = $sexe;
@@ -54,14 +54,13 @@ class Realisateur{
         $this->allFilms[] = $film;
     }
     
-    function afficherFilms() {
-
+    public function afficherFilms() {
         $result =  $this . " a réalisé au cour de sa carrière : <br>";
         foreach ($this->allFilms as $film) {
             $result .= $film . " <br>";
         }
 
-        return $result;
+        return $result."<br>";
     }
 
     function __toString(){
