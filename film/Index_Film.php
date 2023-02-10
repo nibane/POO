@@ -18,33 +18,35 @@ $av = new Genre("Aventure");
 $sf = new Genre("Science-fiction");
 
 
-$R1 = new Realisateur("Christopher", "Nolan", "Homme", "1970/07/30");
+$Real1 = new Realisateur("Christopher", "Nolan", "Homme", "1970/07/30");
 
-$F1 = new Film("Batman et robin", 1997, 140, $R1, $po);
+$Film1 = new Film("Batman et robin", 1997, 140, $Real1, $po);
 
-$R2 = new Realisateur("George", "Lucas", "Homme", "1944/03/14");
+$Real2 = new Realisateur("George", "Lucas", "Homme", "1944/03/14");
 
-$F2 = new Film("Star wars", 1977, 121, $R2, $sf);
+$Film2 = new Film("Star wars", 1977, 121, $Real2, $sf);
 
-$R3 = new Realisateur("Peter", "Jackson", "Homme", "1961/10/31");
+$Real3 = new Realisateur("Peter", "Jackson", "Homme", "1961/10/31");
 
-$F3 = new Film ("Le Seigneur des anneaux", 2001,178 ,$R3 ,$fa);
-
-
-$A1 = new Acteur ("George","Clooney","Homme","1961/03/06");
-$R1 = new Role ("Batman");
-$C1 = new Casting ($A1,$F1,$R1);
-
-echo $C1;
-
-echo $po;
-
-// echo $R1->afficherFilms()."<br>";
-// echo $R2->afficherFilms()."<br>";
-// echo $R3->afficherFilms()."<br>";
+$Film3 = new Film ("Le Seigneur des anneaux", 2001,178 ,$Real3 ,$fa);
 
 
+$Acteur1 = new Acteur ("George","Clooney","Homme","1961/03/06");
+$Role1 = new Role ("Batman");
+$Casting1 = new Casting ($Acteur1,$Film1,$Role1);
 
+// echo $Casting1;
+
+// echo $sf."<br>";
+
+// echo $Real1->afficherFilms()."<br";
+
+// echo $Film1;
+
+
+// $Acteur1->afficherCasting()." ";
+
+$Film1->afficherCasting();
 
 
 
