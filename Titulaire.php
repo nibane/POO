@@ -57,7 +57,6 @@ class Titulaire {
     }
     public function age(){
         $date = $this->naissance;
-       
         $today = new DateTime();
         $diff = date_diff($date,$today);
         echo $diff->format('%y').'ans';
