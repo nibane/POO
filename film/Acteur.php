@@ -45,6 +45,14 @@ class Acteur{
     function addCasting(Casting $casting) {
         $this->castings[] = $casting;
     }
+
+    function afficherCasting(){
+        echo "L'acteur " . $this->get_prenom() . " ". $this->get_nom(). " a interprété :<BR>";
+        foreach($this->castings as $casting){
+            echo $casting->get_role() ." dans le film " . $casting->get_film() . "<br>"; 
+        }
+    }
+
     function __toString()
     {
         return $this->nom." ".$this->prenom." qui est un(e) ".$this->sexe." est née en ".$this->naissance->format("Y/m/d")." ";
