@@ -4,7 +4,7 @@ class Genre{
     private string $nomGenre;
     private array $films;
 
-    function __construct($nomGenre){
+    function __construct(string $nomGenre){
         $this->nomGenre = $nomGenre;
         $this->films = [];
     }
@@ -26,13 +26,13 @@ class Genre{
     function ajouterFilm(Film $film){
         $this->films[] = $film;
     }
-    function afficherFilm(){
+    function AfficherFilm(){
         foreach ($this->films as $film){
             echo $film;
         }
     }
     function __toString(){
-        return " : film ".$this->nomGenre." ".$this->afficherFilm();
+        return " genre : ".$this->nomGenre." ".$this->afficherFilm();
     }
 
 }
