@@ -36,6 +36,10 @@ class casting {
     function get_role(){
         return $this->role;
     }
+    function __toString()
+    {
+        return "L'acteur ".$this->acteur." a jouer dans ".$this->film." en tant que ".$this->role;
+    }
 
 }
     
