@@ -70,7 +70,12 @@ class Film {
         $this->castings[] = $casting;
     }
     
-    
+    function afficherCasting(){
+        echo "Dans le film " . $this->get_titre() . " réalisé par ". $this->get_real(). "  :<BR>";
+        foreach($this->castings as $casting){
+            echo $casting->get_role() ." a été incarné par " . $casting->get_acteur() . "<br>"; 
+        }
+    }
 
     function __toString() {
         return $this->titre . " sorti en : " . $this->date;
