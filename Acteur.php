@@ -5,12 +5,16 @@ class Acteur{
     
     private string $nom;
     private string $prenom;
+    private string $sexe ;
+    private DateTime $naissance;
     private array $castings;
 
-    function __construct(string $nom, string $prenom)
+    function __construct(string $nom, string $prenom, string $sexe, string $naissance)
     {
         $this->nom = $nom;
         $this->prenom = $prenom;
+        $this->sexe = $sexe;
+        $this->naissance = new DateTime($naissance);
         $this->castings = [];
         
     }
@@ -43,7 +47,7 @@ class Acteur{
     }
     function __toString()
     {
-        return $this->nom." ".$this->prenom;
+        return $this->nom." ".$this->prenom." qui est un(e) ".$this->sexe." est née en ".$this->naissance->format("Y/m/d")." ";
     }
     
 
