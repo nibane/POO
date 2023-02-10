@@ -34,8 +34,11 @@ class Role {
     {
         return $this->nomRole."<br>";
     }
-
-
+    function AfficherCasting(){
+        foreach ($this->castings as $acteur){
+            echo $acteur;
+        }
+    }
 }
 
 
