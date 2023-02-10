@@ -24,7 +24,15 @@ class Genre{
     }
 
     function ajouterFilm(Film $film){
-        $this->films[] = $film; 
+        $this->films[] = $film;
+    }
+    function afficherFilm(){
+        foreach ($this->films as $film){
+            echo $film;
+        }
+    }
+    function __toString(){
+        return " : film ".$this->nomGenre." ".$this->afficherFilm();
     }
 
 }

@@ -37,6 +37,8 @@ $C1 = new Casting ($A1,$F1,$R1);
 
 echo $C1;
 
+echo $po;
+
 // echo $R1->afficherFilms()."<br>";
 // echo $R2->afficherFilms()."<br>";
 // echo $R3->afficherFilms()."<br>";
