@@ -20,7 +20,7 @@ $sf = new Genre("Science-fiction");
 
 $R1 = new Realisateur("Christopher", "Nolan", "Homme", "1970/07/30");
 
-$F1 = new Film("Batman", 2025, 140, $R1, $po);
+$F1 = new Film("Batman et robin", 1997, 140, $R1, $po);
 
 $R2 = new Realisateur("George", "Lucas", "Homme", "1944/03/14");
 
@@ -31,7 +31,7 @@ $R3 = new Realisateur("Peter", "Jackson", "Homme", "1961/10/31");
 $F3 = new Film ("Le Seigneur des anneaux", 2001,178 ,$R3 ,$fa);
 
 
-$A1 = new Acteur ("George","Clooney");
+$A1 = new Acteur ("George","Clooney","Homme","1961/03/06");
 $R1 = new Role ("Batman");
 $C1 = new Casting ($A1,$F1,$R1);
 
